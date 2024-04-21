@@ -102,4 +102,45 @@ Wrapper.Right.Shop.h5 = styled.h5`
   left: -18.8px;
   top: -7.7px;
 `;
-export { Wrapper };
+
+const CaruselFlower = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 505px;
+  background-color: orange;
+  margin: auto;
+`;
+
+CaruselFlower.Left = styled.div`
+  width: 50%;
+`;
+CaruselFlower.Right = styled.div`
+  width: 50%;
+  background-color: yellow;
+`;
+
+CaruselFlower.Left.Text = styled.p`
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-align: left;
+`;
+
+CaruselFlower.Left.Text1 = styled.h1`
+  font-family: "Inter", sans-serif;
+  font-size: 70px;
+  font-weight: 900;
+  line-height: 70px;
+  text-align: left;
+`;
+
+// const Uppercase = () => {
+//   return CaruselFlower.Left.Text1.toUpperCase();
+// };
+
+// console.log(Uppercase());
+
+export { Wrapper, CaruselFlower };

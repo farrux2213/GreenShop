@@ -1,37 +1,52 @@
 import { Component } from "react";
-import { Wrapper } from "./style";
+import { Wrapper, CaruselFlower } from "./style";
 import Logo from "/Logo.svg";
 import { LogoutOutlined } from "@ant-design/icons";
 import shop from "/shop.svg";
 import ellipseShop from "/ellipseShop.svg";
 import search from "/search.svg";
+import caruselDot from "/caruselDot.svg";
 
 class App extends Component {
   render() {
     return (
-      <Wrapper>
-        <Wrapper.Left>
-          <img src={Logo} />
-        </Wrapper.Left>
-        <Wrapper.Middle>
-          <Wrapper.Middle.Item>Home</Wrapper.Middle.Item>
-          <Wrapper.Middle.Item>Shop</Wrapper.Middle.Item>
-          <Wrapper.Middle.Item>Plant Care</Wrapper.Middle.Item>
-          <Wrapper.Middle.Item>Blogs</Wrapper.Middle.Item>
-        </Wrapper.Middle>
-        <Wrapper.Right>
-          <img src={search} className="search" alt="no img" />
-          <Wrapper.Right.Shop>
-            <img src={shop} alt="no img" className="shop" />
-            <img src={ellipseShop} alt="no img" className="ellipseShop" />
-            <Wrapper.Right.Shop.h5>6</Wrapper.Right.Shop.h5>
-          </Wrapper.Right.Shop>
-          <Wrapper.Right.Login>
-            <LogoutOutlined className="LogoutOutlined" />
-            <Wrapper.Right.Login.Text>Login</Wrapper.Right.Login.Text>
-          </Wrapper.Right.Login>
-        </Wrapper.Right>
-      </Wrapper>
+      <>
+        <Wrapper>
+          <Wrapper.Left>
+            <img src={Logo} />
+          </Wrapper.Left>
+          <Wrapper.Middle>
+            <Wrapper.Middle.Item>Home</Wrapper.Middle.Item>
+            <Wrapper.Middle.Item>Shop</Wrapper.Middle.Item>
+            <Wrapper.Middle.Item>Plant Care</Wrapper.Middle.Item>
+            <Wrapper.Middle.Item>Blogs</Wrapper.Middle.Item>
+          </Wrapper.Middle>
+          <Wrapper.Right>
+            <img src={search} className="search" alt="no img" />
+            <Wrapper.Right.Shop>
+              <img src={shop} alt="no img" className="shop" />
+              <img src={ellipseShop} alt="no img" className="ellipseShop" />
+              <Wrapper.Right.Shop.h5>6</Wrapper.Right.Shop.h5>
+            </Wrapper.Right.Shop>
+            <Wrapper.Right.Login>
+              <LogoutOutlined className="LogoutOutlined" />
+              <Wrapper.Right.Login.Text>Login</Wrapper.Right.Login.Text>
+            </Wrapper.Right.Login>
+          </Wrapper.Right>
+        </Wrapper>
+        <CaruselFlower>
+          <CaruselFlower.Left>
+            <CaruselFlower.Left.Text>
+              WELCOME TO GREENSHOP
+            </CaruselFlower.Left.Text>
+            <CaruselFlower.Left.Text1>
+              Let’s Make a Better Planet
+            </CaruselFlower.Left.Text1>
+          </CaruselFlower.Left>
+          <CaruselFlower.Right></CaruselFlower.Right>
+        </CaruselFlower>
+        <img src={caruselDot} />
+      </>
     );
   }
 }
