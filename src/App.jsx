@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Wrapper, CaruselFlower } from "./style";
+import { Wrapper, CaruselFlower, CaruselDotimg } from "./style";
 import Logo from "/Logo.svg";
 import { LogoutOutlined } from "@ant-design/icons";
 import shop from "/shop.svg";
@@ -7,6 +7,8 @@ import ellipseShop from "/ellipseShop.svg";
 import search from "/search.svg";
 import caruselDot from "/caruselDot.svg";
 import Appp from "./ANTD";
+import imageFlowers from "/imageFlowers.svg";
+import smallFlowers from "/smallFlowers.svg";
 
 class App extends Component {
   render() {
@@ -41,7 +43,7 @@ class App extends Component {
               WELCOME TO GREENSHOP
             </CaruselFlower.Left.Text>
             <CaruselFlower.Left.Text1>
-              LET’S MAKE A BETTER PLANET
+              LET’S MAKE A BETTER <span className="planet">PLANET</span>
             </CaruselFlower.Left.Text1>
             <CaruselFlower.Left.Text2>
               We are an online plant shop offering a wide range of cheap and
@@ -50,9 +52,14 @@ class App extends Component {
             </CaruselFlower.Left.Text2>
             <Appp></Appp>
           </CaruselFlower.Left>
-          <CaruselFlower.Right></CaruselFlower.Right>
+          <CaruselFlower.Right>
+            <img src={smallFlowers} alt="no image" className="smallFlower" />
+            <img src={imageFlowers} alt="no image" className="bigFlower" />
+          </CaruselFlower.Right>
         </CaruselFlower>
-        <img src={caruselDot} />
+        <CaruselDotimg>
+          <img src={caruselDot} alt="no image" className="carusel" />
+        </CaruselDotimg>
       </>
     );
   }

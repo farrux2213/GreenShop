@@ -58,7 +58,6 @@ Wrapper.Right.Login = styled.div`
     color: white;
     position: relative;
     left: 16px;
-    top: 9.5px;
   }
 `;
 
@@ -110,14 +109,35 @@ const CaruselFlower = styled.div`
   height: 505px;
   background-color: orange;
   margin: auto;
+  position: relative;
+  top: 20px;
+  z-index: 10;
 `;
 
 CaruselFlower.Left = styled.div`
-  width: 50%;
+  width: 60%;
+  padding: 30.5px;
+  background-color: #fbfbfb;
+  z-index: 10;
 `;
 CaruselFlower.Right = styled.div`
-  width: 50%;
-  background-color: yellow;
+  width: 40%;
+  background-color: #fbfbfb;
+  z-index: 10;
+
+  .bigFlower {
+    position: relative;
+    top: -130px;
+    cursor: pointer;
+  }
+
+  .smallFlower {
+    position: relative;
+    top: 355px;
+    left: 30px;
+    cursor: pointer;
+    display: block;
+  }
 `;
 
 CaruselFlower.Left.Text = styled.p`
@@ -127,6 +147,8 @@ CaruselFlower.Left.Text = styled.p`
   line-height: 16px;
   letter-spacing: 0.1em;
   text-align: left;
+  position: relative;
+  top: 37px;
 `;
 
 CaruselFlower.Left.Text1 = styled.h1`
@@ -135,6 +157,10 @@ CaruselFlower.Left.Text1 = styled.h1`
   font-weight: 800;
   line-height: 70px;
   text-align: left;
+
+  .planet {
+    color: #46a358;
+  }
 `;
 
 CaruselFlower.Left.Text2 = styled.p`
@@ -143,6 +169,9 @@ CaruselFlower.Left.Text2 = styled.p`
   font-weight: 400;
   line-height: 24px;
   text-align: left;
+  width: 557px;
+  position: relative;
+  top: -25px;
 `;
 
 // const Uppercase = () => {
@@ -151,4 +180,16 @@ CaruselFlower.Left.Text2 = styled.p`
 
 // console.log(Uppercase());
 
-export { Wrapper, CaruselFlower };
+const CaruselDotimg = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+
+  .carusel {
+    cursor: pointer;
+    z-index: 20;
+  }
+`;
+
+export { Wrapper, CaruselFlower, CaruselDotimg };
