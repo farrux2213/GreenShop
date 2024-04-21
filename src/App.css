@@ -5,9 +5,3 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
-Wrapper.Middle.Item {
-  :hover {
-    font-size: x-large;
-  }
-}
