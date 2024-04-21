@@ -132,8 +132,16 @@ CaruselFlower.Left.Text = styled.p`
 CaruselFlower.Left.Text1 = styled.h1`
   font-family: "Inter", sans-serif;
   font-size: 70px;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 70px;
+  text-align: left;
+`;
+
+CaruselFlower.Left.Text2 = styled.p`
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
   text-align: left;
 `;
 
