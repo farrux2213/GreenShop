@@ -125,19 +125,19 @@ CaruselFlower.Right = styled.div`
   background-color: #fbfbfb;
   z-index: 10;
 
-  .bigFlower {
+  /* .bigFlower {
     position: relative;
     top: -130px;
     cursor: pointer;
-  }
+  } */
 
-  .smallFlower {
+  /* .smallFlower {
     position: relative;
     top: 355px;
     left: 30px;
     cursor: pointer;
     display: block;
-  }
+  } */
 `;
 
 CaruselFlower.Left.Text = styled.p`
