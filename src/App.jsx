@@ -1,6 +1,7 @@
 import { Component } from "react";
 import "./App.css";
-import { Wrapper, CaruselFlower, CaruselDotimg } from "./style";
+import { Wrapper, CaruselFlower } from "./style";
+import Mega from "./Carusel";
 // import { PlusSlides, CurrentSlide, ShowSlides } from "./carusel";
 import Logo from "/Logo.svg";
 import { LogoutOutlined } from "@ant-design/icons";
@@ -10,26 +11,12 @@ import search from "/search.svg";
 import Appp from "./ANTD";
 // import imageFlowers from "/imageFlowers.svg";
 // import smallFlowers from "/smallFlowers.svg";
-import Flickity from "react-flickity-component";
-import "./flickity.css";
-import flower1 from "./images/flower1.jpg";
-import flower2 from "./images/flower2.jpg";
-import flower3 from "./images/flower3.jpg";
-import flower4 from "./images/flower4.jpg";
-import flower5 from "./images/flower5.jpg";
-import flower6 from "./images/flower6.jpg";
+// import flower1 from "./images/flower1.jpg";
+// import flower2 from "./images/flower2.jpg";
+// import flower3 from "./images/flower3.jpg";
+
 class App extends Component {
   render() {
-    const flickityOptions = {
-      initialIndex: 2,
-    };
-
-    const cars = {
-      id: [1, 2, 3, 4, 5, 6],
-      title: ["Flower1", "Flower2", "Flower3", "Flower4", "Flower5", "Flower6"],
-      image: [flower1, flower2, flower3, flower1, flower2, flower3],
-    };
-
     return (
       <>
         <Wrapper>
@@ -71,59 +58,10 @@ class App extends Component {
             <Appp></Appp>
           </CaruselFlower.Left>
           <CaruselFlower.Right>
-            {/* <div className="mySlides fade">
-              <img src={smallFlowers} alt="no image" className="smallFlower" />
-            </div>
-            <div className="mySlides fade">
-              <img src={imageFlowers} alt="no image" className="bigFlower" />
-            </div> */}
-
-            <Flickity
-              className="Slider"
-              elementType="div"
-              disableImagesLoaded={false}
-              options={flickityOptions}
-              reloadOnUpdate
-              static
-            >
-              {cars["id"].map((index) => {
-                return (
-                  <div key={index} className="Plate">
-                    <>
-                      <div
-                        style={{
-                          backgroundImage: `url(${cars["image"][index - 1]})`,
-                          width: "370px",
-                          height: "400px",
-                          backgroundSize: "cover",
-
-                          // backgroundRepeat: "no-repeat",
-                        }}
-                      ></div>
-                    </>
-                  </div>
-                );
-              })}
-            </Flickity>
-
-            {/* <a className="prev" onClick={PlusSlides}>
-              &#10094
-            </a>
-            <a className="next" onClick={PlusSlides}>
-              &#10095
-            </a> */}
+            <Mega></Mega>
           </CaruselFlower.Right>
-          {/* <br></br> */}
-
-          {/* <div style="text-align: center;">
-            <span className="dot" onClick={CurrentSlide}></span>
-            <span className="dot" onClick={CurrentSlide}></span>
-            <span className="dot" onClick={CurrentSlide}></span>
-          </div> */}
         </CaruselFlower>
-        {/* <CaruselDotimg>
-          <img src={caruselDot} alt="no image" className="carusel" />
-        </CaruselDotimg> */}
+        <Mega></Mega>
       </>
     );
   }

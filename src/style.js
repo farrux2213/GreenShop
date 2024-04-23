@@ -122,7 +122,8 @@ CaruselFlower.Left = styled.div`
 `;
 CaruselFlower.Right = styled.div`
   width: 40%;
-  background-color: #fbfbfb;
+  /* background-color: #fbfbfb; */
+  background-color: black;
   z-index: 10;
 
   /* .bigFlower {
